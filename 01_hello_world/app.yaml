@@ -1,0 +1,47 @@
+# runtime 參數用來告訴 GAE 執行的是哪個 runtime。
+# 不同 runtime / 世代的 runtime 能接受的 app.yaml
+# 參數定義也不完全相同
+#
+# 可用的值有這些（未來可能會增加）：
+#
+# |----------------|----------------|
+# | 標準環境(一代) | 標準環境(二代) |
+# |----------------|----------------|
+# | python27       | python37       |
+# | php56          | php72          |
+# | go             | php73          |
+# | go111          | go112          |
+# |                | java11         |
+# |                | nodejs8        |
+# |                | nodejs10       |
+# |                | ruby25         |
+# |----------------|----------------|
+#
+# java8 runtime （一代）的主設定檔不是 app.yaml
+# 而是 web.xml 跟 appengine-web.xml
+#
+# 參考連結：
+# - https://cloud.google.com/appengine/docs/standard/runtimes
+#
+runtime: php73
+
+# handlers 參數定義哪些網址對應到哪些檔案。
+# 對於靜態檔案，可以設定整個資料夾，也可以設定單一個檔案。
+#
+# 動態檔案（例如 .php 或 .py）在第一代 runtime 跟第二代 runtime 的做法不同。
+#
+# 在一代 runtime 中，不同的網址可以各自設定不同的進入點。
+#
+# 在二代 runtome 中，動態檔案的進入點一律設定成 auto，runtime 自行決定呼叫哪支程式。
+# 例如對 php72 / php73 來說，進入點一定會是 index.php 或 public/index.php。
+#
+handlers:
+
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+
+- url: /.*
+  script: auto
+
+
