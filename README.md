@@ -16,7 +16,7 @@ TODO: 補上操作畫面截圖。
 
 然後為這個專案[啟用 Google App Engine](https://console.cloud.google.com/appengine)。注意啟用時會需要選擇
 GAE 要建立在哪個[地區](https://cloud.google.com/compute/docs/regions-zones)，請選擇離使用者地理位置最接近的區域
-（對於台灣來說，最接近的可使用位置是東京 `asia-northeast1` 或大阪 `asia-northeast2`）。
+（對於台灣來說，最接近的可使用位置是香港 `asia-east2` 東京 `asia-northeast1` 或大阪 `asia-northeast2`）。
 
 TODO: 補上操作畫面截圖。
 
