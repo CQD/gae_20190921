@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "MySite\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^2.11"
+    }
+}

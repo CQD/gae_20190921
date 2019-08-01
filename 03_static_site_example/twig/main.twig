@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ title }} - 簡單購物網站</title>
+<link rel="stylesheet" href="/s/main.css">
+<link rel="shortcut icon" type="image/png" href="/s/favicon.png"/>
+</head>
+<body>
+
+<header><div class="wrapper">
+
+<a id="logo" href="/"><img src="/s/logo.svg"></a>
+<div id="search">
+    <input id="search-text" type="text" placeholder="搜尋文章"><input id="search-button" type="button" value="搜尋">
+</div>
+
+</div></header>
+
+<nav>
+    <div class="wrapper flex">
+{% for category in categories %}
+    <a href="/category?id={{ category.id }}">{{ category.title }}</a>
+{% endfor %}
+    </div>
+</nav>
+
+<div id="main">
+<div class="wrapper">
+{% block main %}
+{{ content }}
+{% endblock%}
+</div>
+</div>
+
+<footer><div class="wrapper flex">
+    <div>
+        <h3>關於我</h3>
+        我的專長<br>
+        我的資歷<br>
+        我的隱私資料
+    </div>
+
+    <div>
+        <h3>技術連結</h3>
+        GCP<br>
+        PHP<br>
+        IEEE<br>
+        W3C
+    </div>
+
+    <div>
+        <h3>其他服務</h3>
+        到府按摩<br>
+        飲料外送<br>
+        感情諮詢<br>
+        吹牛教學
+    </div>
+
+    <div style="padding-top:20px">
+        我名叫沒有人，是個隨處可見的工程師。<br>
+        專長是說廢話跟寫 bug。
+        <hr>
+        Copyright © {{ "now" | date('Y') }} 沒有人<br>
+        All Rights Reserved
+    </div>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "main.twig" %}
+
+{% block main %}
+
+<h1>{{ article.title }}</h1>
+
+<p>{{ article.content|nl2br }}</p>
+
+<p><a href="/category?id={{ article.category.id }}">&gt;&gt; 回到 {{ article.category.title}} 文章清單</a></p>
+
+{% endblock %}

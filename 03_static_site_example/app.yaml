@@ -1,0 +1,10 @@
+runtime: php73
+
+handlers:
+
+- url: /s
+  static_dir: s
+
+- url: /.*
+  script: auto
+
