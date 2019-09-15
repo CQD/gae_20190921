@@ -1,4 +1,4 @@
-.PHONY: deploy
+.PHONY: deploy server
 
 PROJECT_ID:=$(GOOGLE_CLOUD_PROJECT)
 DEPLOY_CMD:=gcloud app deploy --project=$(PROJECT_ID)
