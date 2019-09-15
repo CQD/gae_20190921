@@ -1,7 +1,7 @@
 .PHONY: deploy server install
 
 PROJECT_ID:=$(GOOGLE_CLOUD_PROJECT)
-DEPLOY_CMD:=gcloud app deploy --project=$(PROJECT_ID)
+DEPLOY_CMD:=gcloud app deploy
 
 deploy:
 	@echo \\033[32m執行指令：\\033[1\;33m $(DEPLOY_CMD) \\033[m
