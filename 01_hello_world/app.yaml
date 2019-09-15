@@ -37,10 +37,6 @@ runtime: php73
 #
 handlers:
 
-- url: /robots.txt
-  static_files: public/robots.txt
-  upload: public/robots.txt
-
 - url: /.*
   script: auto
 

@@ -1,6 +1,13 @@
 runtime: php73
 
+# 這個檔案相對於範例 01，增加了靜態檔案的範例
+# Google App Engine 內部處理靜態檔案跟動態檔案的方式不同
 handlers:
+
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+
 - url: /.*
   script: auto
 
