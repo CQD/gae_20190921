@@ -7,6 +7,8 @@
 但對於大規模網站來說，建議還是引入專門的 request router（例如 [nikic/fast-route](https://github.com/nikic/FastRoute)）來依照網址決定要執行的程式；
 或引入功能完整的框架（例如 [Laravel](https://laravel.tw/) 或 [Symfony](https://symfony.com/)），讓整個請求處理流程完全由由框架控制。
 
+另外要注意，App Engine 不允許跳過 app.yaml 的設定直連 PHP 檔案。
+
 ## 操作步驟
 
 在 Cloud Shell 中執行：
