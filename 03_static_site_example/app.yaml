@@ -3,7 +3,7 @@ runtime: php73
 handlers:
 
 - url: /s
-  static_dir: s
+  static_dir: public/s
 
 - url: /.*
   script: auto
