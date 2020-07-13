@@ -1,7 +1,7 @@
 ## 2019-09-21 GDG Cloud 高雄 Google App Engine 教材
 
 這個 repo 的內容是 GDG Cloud 高雄在 2019-09-21 的 Google App Engine
-介紹中所用到的教材。
+介紹中所用到的教材。對應的簡報[在此](https://docs.google.com/presentation/d/1s4eZVYS7mQhMk6snVsAzg5oSgvBde9D2G58CZcCTn8k)。
 
 這份教學用的是 PHP，並使用 [composer](https://getcomposer.org/) 安裝相依的程式套件。
 
